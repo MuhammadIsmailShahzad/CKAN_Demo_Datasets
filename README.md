@@ -1,4 +1,3 @@
-# CKAN_Demo_Datasets
 
 This repo contains demo datasets in the `resources` folder being used to create datasets on CKAN instances by running python script available in the `script` folder.
 
