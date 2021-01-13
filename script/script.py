@@ -6,9 +6,9 @@ import os
 
 # URL(s) for 2 geojson and 2 csv resources in alternate sequence
 dataset_url= ['https://pkgstore.datahub.io/examples/geojson-tutorial/example/data/db696b3bf628d9a273ca9907adcea5c9/example.geojson',
-              'https://raw.githubusercontent.com/datopian/CKAN_Demo_Datasets/main/org1_sample.csv',
-              'https://raw.githubusercontent.com/datopian/CKAN_Demo_Datasets/main/sample.geojson',
-              'https://raw.githubusercontent.com/datopian/CKAN_Demo_Datasets/main/org2_sample.csv']
+              'https://raw.githubusercontent.com/datopian/CKAN_Demo_Datasets/main/resources/org1_sample.csv',
+              'https://raw.githubusercontent.com/datopian/CKAN_Demo_Datasets/main/resources/sample.geojson',
+              'https://raw.githubusercontent.com/datopian/CKAN_Demo_Datasets/main/resources/org2_sample.csv']
 
 def start_workflow():
     BASE_URL, API_KEY = get_ckan_url()
@@ -96,7 +96,7 @@ def create_org(BASE_URL, API_KEY):
         if not resp.status_code == 200:
             data = {
             'name': org_id,
-            'image_url': 'https://github.com/datopian/CKAN_Demo_Datasets/raw/main/datopian.png'
+            'image_url': 'https://github.com/datopian/CKAN_Demo_Datasets/raw/main/resources/datopian.png'
             }
             resp = requests.post(
                 urljoin(BASE_URL, '/api/3/action/organization_create'),
